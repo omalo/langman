@@ -1,4 +1,10 @@
 #!groovy​
+def rvmSh(String rubyVersion, String cmd) {
+    def sourceRvm = 'source ~/.rvm/scripts/rvm'
+    def useRuby = "rvm use --install $rubyVersion"
+    sh "${sourceRvm}; ${useRuby}; $cmd"
+}
+
 pipeline {
   agent any
 
@@ -9,8 +15,9 @@ pipeline {
   stages {
     stage ('bundle tools') {
       steps {
-        sh "gem install bundler"
-        sh "bundle tools"
+        rvmSh 'ruby --version'
+        rvmSh "gem install bundler"
+        rvmSh "bundle tools"
       }
     }
 
