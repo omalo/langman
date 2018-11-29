@@ -19,12 +19,6 @@ pipeline {
         }
     }
   }
-
-if (isRelease()) {
-    stage('Publish') {
-        echo 'Would publish to rubygems.org' // TODO
-        slackSend "Published ${name()} gem version ${version()} to the rubygems.org", color: 'good'
-    }
 }
 
 def bundle_exec(command) {
@@ -78,5 +72,4 @@ def withRvm(version, gemset, cl) {
     ]) {
         cl()
     }
-}
 }
