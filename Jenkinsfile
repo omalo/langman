@@ -7,6 +7,13 @@ pipeline {
   }
 
   stages {
+    stage ('bundle tools') {
+      steps {
+        sh "gem install bundler"
+        sh "bundle tools"
+      }
+    }
+
     stage ('cucumber') {
       steps {
         sh "cucumber"
