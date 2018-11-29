@@ -9,8 +9,7 @@ pipeline {
   stages {
 
     stage('Install dependencies') {
-        node {
-            checkout scm
+        steps {
              withRvm('ruby-2.3.8') {
                 sh 'bundle -v || gem install bundler'
                 sh 'bundle install'
