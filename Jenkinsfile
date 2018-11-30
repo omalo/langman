@@ -4,14 +4,6 @@ pipeline {
 
   stages {
 
-    stage ('SonarQube analisis') {
-      steps {
-        withSonarQubeEnv ('sonarMac') {
-          sh "sonar-scanner -X"
-        }
-      }
-    }
-
     stage ('bundle tools') {
       steps {
         sh 'bundle install'
@@ -28,6 +20,14 @@ pipeline {
         sh "rspec"
       }
     }
+  stage ('SonarQube analisis') {
+    steps {
+      withSonarQubeEnv ('sonarMac') {
+        sh "sonar-scanner -X"
+      }
+    }
+  }
+  
   }
 }
 
