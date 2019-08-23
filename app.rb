@@ -2,11 +2,11 @@ require 'sinatra'
 require './config'
 
 get '/' do
-    session["word"] = params["word"]
-    if session["word"] == "cat"
+    session["words"] = ["dog"]
+    if session["words"][0] == "dog"
         "---"
     end
-    erb(:juego)
+    #erb(:juego)
 end
 
 get '/configurar/:palabra' do |palabra|
