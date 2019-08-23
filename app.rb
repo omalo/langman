@@ -5,7 +5,6 @@ require './lib/generarPalabra.rb'
 get '/configurar/:palabra' do |palabra|
 
     generar = Generar.new 
-
     session["guiones"] = generar.guiones(palabra)
     erb(:juego)
 end

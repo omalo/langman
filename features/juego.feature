@@ -9,3 +9,11 @@ Scenario: Se muestra la palabra a adivinar con guiones
     Then debo ver "---"
     And debo ver "LANGMAN"
 
+    Given la palabra es "agile"
+    Then debo ver "-----"
+    And debo ver "LANGMAN"
+
+    Given la palabra es "cucumber"
+    Then debo ver "--------"
+    And debo ver "LANGMAN"
+
