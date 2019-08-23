@@ -16,5 +16,11 @@
 <body>
     <h1>LANGMAN</h1> <br><br>
     <h1> <%=session['guiones']%></h1>
+
+    <form action="/jugar" method='POST'>
+        <input type="text" name='letra'>
+        <input type="submit" value="Jugar">
+    </form>
+
 </body>
 </html>

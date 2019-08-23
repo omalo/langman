@@ -13,3 +13,7 @@ get '/configurar/' do
     session["guiones"] = generar.guiones
     erb(:juego)
 end
+
+post '/jugar' do
+    erb(:juego)
+end
