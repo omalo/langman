@@ -7,3 +7,5 @@ Feature: Juego
 Scenario: Se muestra la palabra a adivinar con guiones
     Given la palabra es "dog"
     Then debo ver "---"
+    And debo ver "LANGMAN"
+
