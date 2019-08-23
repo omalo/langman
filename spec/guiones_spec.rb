@@ -4,26 +4,26 @@ describe Generar do
 		#Arrange (preparacion de escenario de pruebas)
         generar = Generar.new
 		#Act
-		result = generar.guiones("dog")  
+		result = generar.guiones("DOG")  
 		#Assert
 		expect(result).to eq "---"
     end
-	it 'Si recibo paz debo ver ---' do
+	it 'Si recibo agile debo ver -----' do
 		#Arrange (preparacion de escenario de pruebas)
         generar = Generar.new
 		#Act
-		result = generar.guiones("paz")  
+		result = generar.guiones("AGILE")  
 		#Assert
-		expect(result).to eq "---"
+		expect(result).to eq "-----"
     end    
     
-    it 'Si recibo costumbre debo ver ---' do
+    it 'Si recibo cucumber debo ver --------' do
 		#Arrange (preparacion de escenario de pruebas)
         generar = Generar.new
 		#Act
-		result = generar.guiones("costumbre")  
+		result = generar.guiones("CUCUMBER")  
 		#Assert
-		expect(result).to eq "---------"
+		expect(result).to eq "--------"
 	end  
 end
 
