@@ -3,7 +3,7 @@ Given(/^que abri la aplicacion$/) do
   end
 
   Given(/^la palabra es "([^"]*)"$/) do |word|
-    word == "dog"
+    visit "/configurar/#{word}"
   end
 
   Then(/^debo ver "([^"]*)"$/) do |word|

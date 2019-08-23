@@ -5,6 +5,6 @@ Feature: Juego
     para poder adivinarla
 
 Scenario: Se muestra la palabra a adivinar con guiones
-    Given que abri la aplicacion
-    And la palabra es "dog"
+    Given la palabra es "dog"
+    And que abri la aplicacion
     Then debo ver "---"
