@@ -15,7 +15,16 @@ describe Generar do
 		result = generar.guiones("paz")  
 		#Assert
 		expect(result).to eq "---"
-	end    
+    end    
+    
+    it 'Si recibo costumbre debo ver ---' do
+		#Arrange (preparacion de escenario de pruebas)
+        generar = Generar.new
+		#Act
+		result = generar.guiones("costumbre")  
+		#Assert
+		expect(result).to eq "---------"
+	end  
 end
 
 
