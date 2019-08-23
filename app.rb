@@ -3,7 +3,7 @@ require './config'
 
 get '/' do
     session["word"] = params["word"]
-    if session["word"] == "dog"
+    if session["word"] == "cat"
         "---"
     end
     erb(:juego)
