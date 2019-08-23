@@ -1,10 +1,11 @@
 require 'sinatra'
 require './config'
-
+require './lib/generarPalabra.rb'
 
 get '/configurar/:palabra' do |palabra|
-    session["words"] = {"dog"=>"---", "cucumber"=>"--------", "agile" => "-----"}
-    session['palabraSecreta'] = palabra
-    session["guiones"] = session["words"][session["palabraSecreta"]]
+
+    generar = Generar.new 
+
+    session["guiones"] = generar.guiones(palabra)
     erb(:juego)
 end
